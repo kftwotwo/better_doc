@@ -1,14 +1,14 @@
 var gulp = require('gulp');
 var env  = require('gulp-env');
-var browserify = require('browserify'); //npm install browserify --save-dev
-var source = require('vinyl-source-stream'); //npm install vinyl-source-stream --save-dev
-var concat = require('gulp-concat'); //npm install gulp-concat --save-dev
-var uglify = require('gulp-uglify'); //npm install gulp-uglify --save-dev
-var utilities = require('gulp-util'); //npm install gulp-util --save-dev
-var del = require('del'); //npm install del --save-dev
-var jshint = require('gulp-jshint'); //npm install jshint --save-dev
-var moment = require('moment'); //npm install moment --save-dev || npm install gulp-jshint --save-dev
-var lib = require('bower-files')({ //npm install bower-files --save-dev
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var utilities = require('gulp-util');
+var del = require('del');
+var jshint = require('gulp-jshint');
+var moment = require('moment');
+var lib = require('bower-files')({
   "overrides":{
     "bootstrap" : {
       "main": [
@@ -22,7 +22,6 @@ var lib = require('bower-files')({ //npm install bower-files --save-dev
 var browserSync = require('browser-sync').create(); //npm install browser-sync --save-dev
 var buildProduction = utilities.env.production;
 
-//gulp jsBrowserify
 
 gulp.task('concatScripts', function() {
   return gulp.src(['./js/*-interface.js'])
@@ -73,6 +72,12 @@ gulp.task('jsBower', function() {
 gulp.task('bowerCSS', function() {
   return gulp.src(lib.ext('css').files)
     .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('./build/css'));
+});
+
+gulp.task('bowerCSS', function() {
+  return gulp.src(lib.ext('css').files)
+    .pipe(concat('styles.css'))
     .pipe(gulp.dest('./build/css'));
 });
 

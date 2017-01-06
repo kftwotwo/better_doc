@@ -1,14 +1,19 @@
+var apiKey = require('./../.env').apiKey;
+
 function Doctor() {
-
+  this.results = [];
 }
-Doctor.prototype.docSearch = function (specaility) {
-  $.get("https://api.betterdoctor.com/2016-03-01/doctors?query="+ specaility + "&location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=10&user_key=68557f043bbcc8777c1f8356cec25616");
 
-  $("#test").append("<li>Finding..</li>");
-  console.log("object");
-
-  response.docs.forEach(function(doc) {
-        $("#test").append("<li>" + doc.first_name + "</li>");
+Doctor.prototype.getDoctors = function(specaility) {
+  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ specaility +'&location=45.5231%2C-122.6765%2C%205&user_location=45.5231%2C-122.6765&skip=0&limit=20&user_key=' + apiKey).then(function(result) {
+     $('#test').append('<h2>' + specaility + '</h2>' + "Doctors that specialize in your issue: " + result.conditions);
+      console.log(result);
+    })
+   .fail(function(error){
+     $('.showDiv').text(error.responseJSON.message);
+      console.log("fail");
     });
 };
-exports.docStuffModule = Doctor;
+
+
+exports.doctorModule = Doctor;

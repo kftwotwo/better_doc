@@ -1,13 +1,13 @@
-var docStuff = require("./../js/doctor_info.js").docStuffModule;
+var Doctor = require('./../js/doctor_info.js').doctorModule;
 var apiKey = require('./../.env').apiKey;
 
-// $(function(){
-//   var newDoc = new Doctor();
-//   var specaility = "";
-// });
-
-$("#doc-form").submit(function(event) {
-    event.preventDefault();
-    console.log("button clicked");
-    $("#doc-input").val();
+$(document).ready(function() {
+  document.getElementById("doc-input").defaultValue = "toothache";
+  var currentDoctorObject = new Doctor();
+  $('#input-button').click(function(){
+    var specaility = $('#userInput').val();
+    console.log('clicked')
+    $('#doc-input').val("");
+    currentDoctorObject.getDoctors(specaility);
+  });
 });

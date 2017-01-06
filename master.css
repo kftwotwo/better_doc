@@ -1,0 +1,8 @@
+html body {
+  background-image: url('http://durandfd.org/site-content/uploads/2015/04/blue_cloth_repeatable.png') !important;
+}
+
+.header {
+    background-color: rgba(75, 75, 75, 0.69);
+    padding-top: .5%;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "doctor",
+  "description": "recommend doctors",
+  "main": "gulpfile.js",
+  "authors": [
+    "Kevin Finley <kftwotwo@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

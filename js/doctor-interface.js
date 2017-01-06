@@ -7,6 +7,7 @@ $(document).ready(function() {
   var currentDoctorObject = new Doctor();
   $('#input-button').click(function(){
     var specaility = $('#doc-input').val();
+    console.log(specaility);
     $('#doc-input').val("");
     currentDoctorObject.getDoctors(specaility);
   });

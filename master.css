@@ -6,3 +6,11 @@ html body {
     background-color: rgba(75, 75, 75, 0.69);
     padding-top: .5%;
 }
+
+.back {
+  background-color: rgba(56, 87, 167, 0.9) !important;
+}
+
+.white {
+  color: white;
+}

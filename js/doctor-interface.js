@@ -6,9 +6,8 @@ $(document).ready(function() {
   document.getElementById("doc-input").defaultValue = "toothache";
   var currentDoctorObject = new Doctor();
   $('#input-button').click(function(){
-    $('#thmb-doc').empty()
+    $('#thmb-doc').empty();
     var specaility = $('#doc-input').val();
-    console.log(specaility);
     $('#doc-input').val("");
     currentDoctorObject.getDoctors(specaility);
   });

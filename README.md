@@ -21,7 +21,7 @@ $ gulp serve
 ```
 
 ## Setting API Keys
-Go to [Better Doctor's](https://developer.betterdoctor.com/signup) site obtain an api key, then set the api key as a environment variable in the following fomat.
+Go to [Better Doctor's](https://developer.betterdoctor.com/signup) site obtain an api key, then set the api key as a environment variable in the following format.
 ```
 exports.apiKey = '<API_KEY>'
 ```
@@ -31,7 +31,10 @@ exports.apiKey = '<API_KEY>'
 If you notice any bugs or problems you can fill out an issue [here](http://www.github.com/kftwotwo/weather_app/issues) or feel free to submit a pull request.
 
 ## Contact details
-Here is my email kf.two.two@gmail.com
+If you need to contact me my email is `kftwotow@gmail.com`
+
+## Contribute
+If you wish to contribute create an issue and describe your idea then fork it and submit a pull request!
 
 ## Technologies Used
 ```

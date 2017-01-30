@@ -9,6 +9,7 @@ Doctor.prototype.getDoctors = function(specaility) {
   .then(function(result) {
     result.data.forEach(function(docs){
       $('#thmb-doc').append("<div class='col-md-5'><div class='thumbnail back'>"+ "<img src=" + docs.profile.image_url + ">" + "<div class='caption'><h3>" + docs.profile.first_name + " " + docs.profile.last_name + "</h3>" + "<p>" + docs.profile.bio + "</p></div></div>");
+      console.log(result);
     });
   })
   .fail(function(error){
